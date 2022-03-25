@@ -6,9 +6,7 @@ jobs:
   security:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Yarn Install
-        run: yarn install
+      - uses: actions/checkout@V2
       - name: Run Snyk opensource to check for vulnerabilities
         uses: snyk/actions/node@master
         continue-on-error: true # To make sure that SARIF upload gets called
